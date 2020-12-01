@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>CGV Register Form</title>
+    <link rel="stylesheet" href="form1.css">
+</head>
+
+<body onload="document.test.reset();">
+    <marquee direction="right" height:300px; behavior="alternate" ; scrollamount="14" ;> Please check the project list
+        before submitting the project name</marquee>
+    <form action="dbbackcgv.php" method="POST" name="test" class="f1" onload="">
+        <table>
+            <tr>
+                <p style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: white; font-size: 150%;">
+                    Project details</p>
+                <td>Teamlead</td>
+                <td><input type="text" name="tml" pattern="[A-Za-z][A-Za-z ]*" required></td>
+                <td>USN</td>
+                <td><input type="text" name="usn" pattern="[1][Ee][Pp][1][65][Cc][Ss][0-9][0-9][0-9]"
+                        title="please enter a valid usn" required></td>
+
+            </tr>
+            <tr>
+                <td>Team member1 </td>
+                <td><input type="text" name="tm1" pattern="[A-Za-z ]*" required></td>
+                <td>USN</td>
+                <td><input type="text" name="usn1" pattern="[1][Ee][Pp][1][65][Cc][Ss][0-9][0-9][0-9]"
+                        title="please enter a valid usn" required></td>
+
+            </tr>
+
+            <tr>
+
+                <td>Project name:</td>
+                <td><input type="text" name="pn" required></td>
+            </tr>
+
+            <tr>
+                <td>Section</td>
+                <td>
+                    <input type="radio" name="sec" value="A" required>A
+                    <input type="radio" name="sec" value="B" required>B
+                </td>
+            </tr>
+            <tr>
+                <td>Email(Teamlead) :</td>
+                <td><input type="email" name="email" placeholder="example@email.com" required></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <form action="infocgv.php" method="POST">
+        <div class="prob">
+            <button type="submit" name="button" class="button"><span>view project list</span> </button>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>
